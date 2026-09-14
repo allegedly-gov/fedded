@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>fedded.org</title>
+
+    <meta name="description" content="0xDEADBEEF is untouchable">
+    <meta name="keywords" content="Baloo is the smartest boi">
+
+    <meta property="og:title" content="FEDDED">
+    <meta property="og:description" content="Where shadows roam and identities vanish.">
+    <meta property="og:site_name" content="fedded.org">
+    <meta property="og:image" content="images/embed.png">
+    <meta property="og:url" content="https://fedded.org">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="https://fedded.org/assets/img/logo.png">
+    <link rel="stylesheet" href="css/nload.css">
+</head>
+
+<body>
+
+    <div id="tsparticles"></div>
+
+    <div id="captcha">
+        <a id="click-button" onclick="if (!window.__cfRLUnblockHandlers) return false; enterSite();" data-cf-modified-432d1f255120441df920749c-=""></a>
+    </div>
+
+    <div id="mainSite">
+        <div class="console-container console-target">
+            <div id="console-body" class="console console-target">
+                <div id="console-input" class="console-target console-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="snow"></div>
+
+    <script protect="" src="js/protect.js" type="432d1f255120441df920749c-text/javascript"></script>
+    <script src="js/snow.js" type="432d1f255120441df920749c-text/javascript"></script>
+    <script src="js/sparkles.js" type="432d1f255120441df920749c-text/javascript"></script>
+    <script src="js/tsparticles.bundle.min.js" type="432d1f255120441df920749c-text/javascript"></script>
+    <script src="js/console.js" type="432d1f255120441df920749c-text/javascript"></script>
+    <script src="js/title.js" type="432d1f255120441df920749c-text/javascript"></script>
+
+    <script type="432d1f255120441df920749c-text/javascript">
+        var mainSite = document.getElementById("mainSite");
+        var captcha  = document.getElementById("captcha");
+        var music    = new Audio("https://fedded.org/assets/require/songs/nload.mp3");
+
+        function enterSite() {
+            music.volume = 1;
+            music.play().catch(function () {});
+            captcha.style.display = "none";
+            mainSite.classList.add("shown");
+
+            tsParticles.load("tsparticles", {
+                fpsLimit: 120,
+                interactivity: {
+                    events: {
+                        onClick:  { enable: false, mode: "push" },
+                        onHover:  { enable: true,  mode: "repulse" },
+                        resize: true
+                    },
+                    modes: {
+                        push:    { quantity: 4 },
+                        repulse: { distance: 300, duration: 0.4 }
+                    }
+                },
+                particles: {
+                    color:   { value: "#7700ff", opacity: 0.5 },
+                    links:   { color: "#7700ff", distance: 150, enable: true, opacity: 0.5, width: 1 },
+                    collisions: { enable: true },
+                    move:    { direction: "none", enable: true, outMode: "bounce", random: false, speed: 1, straight: false },
+                    number:  { density: { enable: true, value_area: 1000 }, value: 60 },
+                    opacity: { value: 0.5 },
+                    shape:   { type: "circle" },
+                    size:    { random: true, value: 3 }
+                },
+                detectRetina: true
+            });
+
+            startGraphModeWatcher();
+        }
+
+        function startGraphModeWatcher() {
+            var input = document.getElementById("console-input");
+            if (!input) return;
+            new MutationObserver(function () {
+                var html = input.innerHTML || "";
+                var isGraph = html.indexOf("    ") !== -1;
+                input.classList.toggle("graph-mode", isGraph);
+            }).observe(input, {
+                childList: true,
+                characterData: true,
+                subtree: true
+            });
+        }
+    </script>
+
+<script src="js/rocket-loader.min.js" data-cf-settings="432d1f255120441df920749c-|49" defer=""></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3a9f9c6bdfa1c99',t:'MTc4OTMzMjExNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;"></iframe><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" data-cf-beacon="{" version":"2024.11.0","token":"0b8e5f49dc2148b7be03160578c96717","r":1,"spa":2}"=""></script>
+
+
+
+</body></html>
