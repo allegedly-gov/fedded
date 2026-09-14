@@ -47,7 +47,7 @@ document.addEventListener("keydown", function (e) {
             consoleReady = false;
             cmdHistoryPos = -1;
             executeCMD(cmdInput).then(result => {
-                consoleData.push("root@0xDEADBEEF:~$ " + cmdInput);
+                consoleData.push("root@0xAllegedly:~$ " + cmdInput);
                 result.forEach(line => {
                     consoleData.push(line);
                 });
@@ -118,10 +118,10 @@ document.addEventListener("keydown", function (e) {
         var outputData = [];
 		if (consoleData.length > 11) {
 			outputData = consoleData.slice(consoleData.length - 11, consoleData.length);
-			outputData.push(`root@0xDEADBEEF:~$ ${cmdInput}${cursor}`);
+			outputData.push(`root@0xAllegedly:~$ ${cmdInput}${cursor}`);
 		} else {
 			outputData = consoleData.map(function (item) {return item});
-			outputData.push(`root@0xDEADBEEF:~$ ${cmdInput}${cursor}`);
+			outputData.push(`root@0xAllegedly:~$ ${cmdInput}${cursor}`);
 		}
 		var output = outputData.join("<br>");
 		consoleInput.innerHTML = output
@@ -141,8 +141,8 @@ document.addEventListener("keydown", function (e) {
                     consoleData = [];
                     resolve([
                         "-> Help: Display This Message.",
-                        "-> Nload: Network Load Information For FEDDED.ORG.",
-                        "-> Leaderboard: Show Biggest Bypassing Attacks Against FEDDED.ORG.",
+                        "-> Nload: Network Load Information For FEDDED.",
+                        "-> Leaderboard: Show Biggest Bypassing Attacks Against FEDDED.",
                         "-> Credits: Original Creators",
                         "-> Laws: The 10 Immutable Laws Of Security",
                         "-> Bios: Redirect To The Bio Page With All Users",
@@ -156,13 +156,13 @@ document.addEventListener("keydown", function (e) {
                     resolve([]);
                     break;
                 
-                case "leaderboard":
+                case "guilds":
                     consoleData = [];
                     resolve([
-                        "Reporting The Biggest Bypassing Attacks 0xDEADBEEF Has Mitigated",
-                        "[#1] - GlideM8 120k + Holding Consistent",
-                        "[#2] - Profile 20k + Holding Consistent",
-                        "[#3] - TBD"
+                        "TOP GUILDS RIGHT NOW!!",
+                        "[#1] - Vindex (enrique for leader!!!)",
+                        "[#2] - Obstinate, has funny people. and tower got cucked again, so bonus point.",
+                        "[#3] - depths saviors because i got banned for saying diddyblud. "
                     ]);
                     break;
                 
@@ -170,9 +170,9 @@ document.addEventListener("keydown", function (e) {
                     consoleData = [];
                     resolve([
                         "[CREDITS]",
-                        "Baloo, Voltic and 0xDEADBEEF: Design & Console.js",
-                        "Alexa: Helping With NLOAD Implementation",
-                        "Source: My PC"
+                        "Imzadi, for being one harmless nigga",
+                        "Enrique, for being turkish",
+                        "polar, for also being turkish"
                     ]);
                     break;
                 
