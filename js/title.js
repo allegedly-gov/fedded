@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const title = "CLICK TO PROCEED";
+    const title = "click to download OPSEC (zako's testicles included)";
     const winTitle = "FEDDED"
 
     const title_element = document.getElementById("click-button");
